@@ -22,15 +22,15 @@ body{
 /* Внутренний отступ для шапки сайта */
 .header {
     padding: 35px 0;
-    position: fixed; /* По размеру экрана*/
+    position: fixed; /* Фиксация шапки на экране при скроллинге*/
     top: 0;
     left: 0;
     right: 0;
     /* чтобы не отключалось изменение цвета при наведении курсора на шапку сайта,
     так как шапка сайта выводится позади основной секции (при наведенни курсора
-    мы выделяем не шапку сайта, а основную секцию*/
+    когда мы выделяем не шапку сайта, а основную секцию*/
     z-index: 5; 
-    background-color: #010208;
+    background-color: #010208;/* Цвет шапки сайта */
 }
 /* Выравнивание и разнесение элементов по разным краям страницы*/
 .header__container {
@@ -39,7 +39,7 @@ body{
     align-items: center;
 }
 .mehu__list {
-    list-style: none;/* Убираем точки перед текстом */
+    list-style: none;/* Убираем точки перед текстом в меню */
     display: flex;
     align-items: center;
     gap: 32px;/* Отступ между словами */
@@ -112,9 +112,11 @@ color: rgba(227, 228, 230, 0.55);
     left: 50%;
     bottom: 42px;
     transform:  translateX(-50%) rotate(90deg); 
-    cursor: pointer;
+    cursor: pointer;/* Выделение кнопки при наведении на нее курсора*/
 }
 
+
+/* ВТОРАЯ СЕКЦИЯ */
 /* Задание стилей для секции работа с клиентами*/
 .works {
     padding: 80px 0 120px;
@@ -126,7 +128,7 @@ color: rgba(227, 228, 230, 0.55);
     line-height: 150%;
     font-weight: 600;
     color: #e3e4e6;
-    max-width: 520px;
+    max-width: 520px; /* Ширина для заголовка Some of... */
 }
 .clients__title span {
     font-weight: 300;
@@ -140,17 +142,14 @@ color: rgba(227, 228, 230, 0.55);
     gap: 20px;
 }
 
-.clients__item {
-}
-
+/* ТРЕТЬЯ СЕКЦИЯ */
 /* Задание стилей для секции демонстрации работ*/
 
 .works {
     padding: 80px 0 120px;
 }
 
-.works__container {
-}
+/* Задание стилей для заголовка*/
 .works__title {
     padding: 80px 0 120px;
     font-weight: 300;
@@ -167,40 +166,44 @@ color: rgba(227, 228, 230, 0.55);
 .works__card {
 }
 .card {
-	display: flex;
-	gap: 32px;
+	display: flex; /* Чтобы текст встал на один уровень с картинкой*/
+	gap: 32px;/* Расстояние между картинкой и текстом справа*/
 }
+
 .card:not(:last-child) {
-	margin-bottom: 95px;
+	margin-bottom: 95px;/* Отступ между карточками*/
 }
+
 .card_r {
-	flex-direction: row-reverse;
+	flex-direction: row-reverse; /* Свойства для карточек справа*/
 }
 .card__img {
-	border-radius: 16px;
+	border-radius: 16px;/* Склугление углов картинки*/
 	overflow: hidden;
-	flex: 0 0 50%;
+	flex: 0 0 50%;/* Картинка будет занимать 50% от ширины*/
 }
 .card__img img {
-	max-width: 100%;
+	max-width: 100%; /* Маштаб для картинки*/
 }
 .card__info {
-	flex: 1 1 auto;
-	align-self: flex-end;
+	flex: 1 1 auto;/* Текст чтобы растягивался на всю длину*/
+	align-self: flex-end; /* Чтобы текст был у нижнего края*/
 }
+/* Задание стилей для текста*/
 .card__tag {
 	font-weight: 600;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #E3E4E6;
-	margin-bottom: 16px;
+	margin-bottom: 16px;/* Отступ между строками текста*/
 }
+/* Задание стилей для текста*/
 .card__text {
 	font-weight: 300;
 	font-size: 32px;
 	line-height: 150%;
 	color: rgba(227, 228, 230, 0.55);
-	margin-bottom: 24px;
+	margin-bottom: 24px;/* Отступ между строками текста*/
 }
 .card__text span {
 	color: #e3e4e6;
@@ -210,6 +213,7 @@ color: rgba(227, 228, 230, 0.55);
 	font-size: 18px;
 	color: #E3E4E6;
 }
+/* Задание стилей для ссылки*/
 .card__button {
 	display: inline-block;
 	margin-top: 32px;
@@ -217,7 +221,7 @@ color: rgba(227, 228, 230, 0.55);
 	border: 1px solid rgba(227, 228, 230, 0.55);
 	border-radius: 100px;
 	color: #fff;
-	text-decoration: none;
+	text-decoration: none; /* убирание подчеркивания*/
 	position: relative;
 }
 .card__button::before {
@@ -235,5 +239,6 @@ color: rgba(227, 228, 230, 0.55);
 	background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
 	border: 1px solid #E3E4E6;
 }
+/* Замена стрелочки на другую*/
 .card__button:hover::before {
 	background: transparent url('../img/arrow-hover.svg') center center no-repeat;
