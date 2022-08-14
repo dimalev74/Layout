@@ -242,3 +242,52 @@ color: rgba(227, 228, 230, 0.55);
 /* Замена стрелочки на другую*/
 .card__button:hover::before {
 	background: transparent url('../img/arrow-hover.svg') center center no-repeat;
+}
+/* ЧЕТВЕРТАЯ СЕКЦИЯ "О себе"*/
+    .about {
+        padding: 75px 0;
+    }
+    .about__container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .about__text {
+        font-size: 32px;
+        line-height: 150%;
+        color: #e3e4e6;
+        font-weight: 600;
+    }
+    .about__text span {
+        color: rgba(227, 228, 230, 0.55);
+        font-weight: 300;
+    }
+    .about__title {
+        font-weight: 600;
+        font-size: 24px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #E3E4E6;
+    }
+    .about__gallery {
+        flex: 0 0 50%;/* Блок с картинками занимает половину ширины экрана*/
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);/* две колонки размером в одну фракцию*/
+        grid-template-rows: repeat(4, 1fr);/* четыре ряда размером в одну фракцию каждая*/
+        gap: 20px;
+    }
+    
+    .about__img {
+    }
+    .about__img:nth-child(1) {
+        grid-column: 1/2;/* с какой по какую находится элемент в колонках таблицы*/
+        grid-row: 2/4; /* с какой по какую находится элемент в строках таблицы*/
+    }
+    .about__img:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    .about__img:nth-child(3) {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
