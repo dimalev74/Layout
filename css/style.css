@@ -88,6 +88,70 @@ body{
     justify-content: center; /* Выравнивание контента по центру страницы*/
     position: relative;
 }
+
+/* ЗАДАНИЕ СТИЛЕЙ ДЛЯ ФОРМЫ АВТОРИЗАЦИИ*/
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(227, 228, 230, 0.55); /*Цвет фона для формы ввода */
+}
+.form h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff; /*Цвет слова "ВХОД" для формы ввода */
+    font-size: 30px;
+    text-transform: uppercase;/*Словo "ВХОД" заглавными буквами */
+}
+/* Отступы для определения границ формы ввода */
+.input-form {
+    margin: 15px 40px;
+    text-align: center;
+}
+.input-form input{
+    padding: 13px;/* Ширина полей для формы ввода */
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    background-color: rgba(227, 228, 230, 0.55);;/*Цвет фона для полей для формы ввода */
+    outline-color: #4c54c5; /*Цвет контура фона для полей для формы ввода */
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus {
+    border: 5px solid #77248a; /*Цвет рамки поля ввода логина и пароля */
+}
+.input-form input[type="submit"]{
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    /*Цвет кнопки Вход без наведения курсора*/
+    background: #77248a;
+    transition: .3s;
+}
+.input-form input[type="submit"]:hover {
+    background: #0aa72c; /*Цвет кнопки Вход при наведении курсора */
+}
+.form a {
+    display:block;
+    padding: 0 0 30px;
+    text-align: center;
+    color: #fff; /*Цвет ссылки "Забыли пароль?" без наведения курсора*/
+    text-decoration: none;
+    transition: .3s;
+}
+.form a:hover{
+    color: #0fc3f5; /*Цвет ссылки "Забыли пароль?" при наведении курсора*/
+}
+
+
+
+
+
 /* Задание стилей для первой надписи*/
 .hero__title {
 font-weight: 300;
