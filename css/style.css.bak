@@ -432,8 +432,8 @@ color: rgba(227, 228, 230, 0.55);
         font-weight: 600;
         color: #E3E4E6;
     }
-    /* Меню-бургер при размере экрана 570px */
-    @media (max-width: 570px) {
+    /* Меню-бургер начинает отображаться при размере экрана 570px */
+    @media (max-width: 576px) {
         .menu__icon {
             display: block;
         }
