@@ -96,6 +96,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(227, 228, 230, 0.55); /*Цвет фона для формы ввода */
+    border-radius: 16px;/*Закругление краев для формы ввода */
 }
 .form h1 {
     margin: 30px 100px;
@@ -115,6 +116,7 @@ body{
     width: 100%;
     color: #fff;
     font-size: 20px;
+    border-radius: 30px;/*Закругление краев для полей ввода формы ввода */
     background-color: rgba(227, 228, 230, 0.55);;/*Цвет фона для полей для формы ввода */
     outline-color: #4c54c5; /*Цвет контура фона для полей для формы ввода */
     border: 1px solid #fff;
